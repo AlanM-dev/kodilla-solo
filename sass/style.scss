@@ -41,6 +41,11 @@ h1 {
   position: fixed;
   height: 100vh;
   z-index: 1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.sidebar-container.closed{
+  transform: translateX(-100%);
 }
 
 .fa-bars {
