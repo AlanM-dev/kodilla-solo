@@ -380,10 +380,17 @@ h1 {
   height: 100vh;
   z-index: 1;
   transition: transform 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .sidebar-container.closed {
-  transform: translateX(-100%);
+  transform: translateX(-80%);
+  height: 43px;
+}
+
+.sidebar-container.closed #hamburger {
+  position: relative;
+  top: -20px;
 }
 
 .fa-bars {
@@ -561,7 +568,7 @@ input {
   display: flex;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -581,7 +588,9 @@ input {
 }
 
 .chart {
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  height: 480px;
 }
 
 .section-links {
@@ -664,10 +673,23 @@ ul {
   margin-left: 0;
 }
 
+.mobile-user-bar {
+  display: none;
+}
+
+.mobile-user-bar img {
+  width: 17px;
+}
+
+.mobile-user-bar .top-cell {
+  padding: 10px;
+}
+
 @media (max-width: 767px) {
   .user-bar {
     -ms-flex-pack: start;
         justify-content: flex-start;
+    display: none;
   }
   .section-links {
     text-align: left;
@@ -684,6 +706,17 @@ ul {
   }
   .chart {
     width: 300px;
+  }
+  .mobile-user-bar {
+    display: block;
+    overflow: hidden;
+  }
+  .section-general-statistic {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .section-links {
+    margin-left: 20px;
   }
 }
 

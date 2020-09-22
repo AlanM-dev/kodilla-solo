@@ -42,10 +42,16 @@ h1 {
   height: 100vh;
   z-index: 1;
   transition: transform 0.5s ease-in-out;
+  overflow: hidden;
 }
 
 .sidebar-container.closed{
-  transform: translateX(-100%);
+  transform: translateX(-80%);
+  height: 43px;
+  #hamburger {
+    position: relative;
+    top: -20px;
+  }
 }
 
 .fa-bars {
@@ -209,7 +215,7 @@ input {
 .table{
   display: flex;
   justify-content: space-between;
-  width: 700px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -227,8 +233,14 @@ input {
 
 
 .chart{
-  margin: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  height: 480px;
+
+  
 }
+
+// style="display: block; width: 858px; height: 480px;"
 
 .section-links{
   margin-left: 220px;
@@ -309,9 +321,20 @@ ul {
   margin-left: 0;
 }
 
+.mobile-user-bar {
+  display: none;
+  img {
+    width: 17px;
+  }
+  .top-cell {
+    padding: 10px;
+  }
+}
+
 @media(max-width: 767px) {
   .user-bar{
     justify-content: flex-start;
+    display: none;
   }
 
   .section-links{
@@ -334,6 +357,22 @@ ul {
   .chart{
     width: 300px;
   }
+
+  .mobile-user-bar {
+    display: block;
+    overflow: hidden;
+  }
+
+  .section-general-statistic {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+
+  .section-links {
+    margin-left: 20px;
+  }
+
+
 }
 
 @media(min-width: 992px) {
